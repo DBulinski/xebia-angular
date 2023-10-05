@@ -1,0 +1,8 @@
+<strong *ngIf="selectedItem !== null">
+  Selected item is {{ selectedItem + 1 }}
+</strong>
+<div class="items-container">
+  <div *ngFor="let item of items; index as i" class="item">
+    <button [disabled]="selectedItem === i" (click)="onItemSelection(i)">Index {{ i + 1 }}</button>
+  </div>
+</div>
